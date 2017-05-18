@@ -14,19 +14,18 @@ namespace PrimeFactorsKata
             var factors = new List<Int32>();
 
             for (var i = num / 2; i >= Math.Sqrt(num); i--)
+            { 
                 if (num % i == 0)
-                    factors.AddRange(GetFactorPair(num, i));
+                {
+                    factors.AddRange(Generate(num / i));
+                    factors.AddRange(Generate(i));
+                }
+            }
 
             if (!factors.Any())
                 factors.Add(num);
 
             return factors;
         }
-
-        private Int32[] GetFactorPair(Int32 num, Int32 factor)
-        {
-            return new[] { num / factor, factor };
-        }
-
     }
 }
