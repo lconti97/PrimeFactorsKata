@@ -36,5 +36,11 @@ namespace PrimeFactorsTest
         {
             CollectionAssert.AreEqual(new[] { 2, 2 }, primeFactor.Generate(4));
         }
+
+        [TestMethod]
+        public void GenerateWithSixReturnsTwoThree()
+        {
+            CollectionAssert.AreEqual(new[] { 2, 3 }, primeFactor.Generate(6));
+        }
     }
 }
