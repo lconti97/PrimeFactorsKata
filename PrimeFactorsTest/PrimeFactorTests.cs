@@ -48,5 +48,11 @@ namespace PrimeFactorsTest
         {
             CollectionAssert.AreEqual(new[] { 2, 2, 2 }, primeFactor.Generate(8));
         }
+
+        [TestMethod]
+        public void GenerateWithNineReturnsThreeThree()
+        {
+            CollectionAssert.AreEqual(new[] { 3, 3 }, primeFactor.Generate(9));
+        }
     }
 }
