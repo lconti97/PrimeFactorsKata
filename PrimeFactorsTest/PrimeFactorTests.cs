@@ -30,5 +30,11 @@ namespace PrimeFactorsTest
         {
             CollectionAssert.AreEqual(new[] { 3 }, primeFactor.Generate(3));
         }
+
+        [TestMethod]
+        public void GenerateWithFourReturnsTwoTwo()
+        {
+            CollectionAssert.AreEqual(new[] { 2, 2 }, primeFactor.Generate(4));
+        }
     }
 }
